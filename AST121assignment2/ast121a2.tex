@@ -45,10 +45,31 @@
 	\newpage 
 	\section{Calculation of distance, size, and Hubble Constant for two galaxy clusters}
 	\textbar{We observe two arbitrary galaxy clusters, and we find Cluster A is situated at a distance of 50 Mpc, as extrapolated from using Cepheid variables. In addition, we have observed that the galaxies in Cluster B are roughly 64 times dimmer than those in Cluster B. We know the distance of Cluster A. Now how does one uncover how far Cluster B lies from us?}
+	\subsection{The Inverse Square Law}
 	
-	
-	
-	
+	\textbar{The inverse square law describes the relationship between energy density per unit of time and the distance from which we observe a light source, which is almost ubiquitous in many equations describing the workings of the cosmos, such as Newtons universal law of gravitation, which states that the strength of a gravitational field decreases with the square of the distance.}
+	\begin{gather*}
+	F_g = \frac{GMm}{r^2} \implies F_g \propto \frac{1}{r^2}
+	\end{gather*}
+	\textbar{One can come about the inverse square law when pondering the geometry of light dispersing out in a three-dimensional space. When light radiates from a point source, it spreads out evenly in all directions, forming a sphere of light. As the sphere expands, the same amount of light is distributed over a larger and larger surface area. Therefore, the light's intensity decreases, with the square of the area, as it travels further away from its light source.}
+	\begin{center}
+		\textit{Area of Sphere = $4\pi r^2, $ where $r$ is the radius}
+	\end{center}
+\textbar{From our understanding of inverse square law, we can conclude:}
+	\begin{gather*}
+	I = \frac{L}{4\pi r^2} \implies I \propto \frac{1}{r^2}
+	\end{gather*}
+\textbar{Now we can solve for the distance to Cluster B. We know the distance to Cluster A is 50 Mpc, and the galaxies in Cluster B are 64 times fainter than A. With inverse square law, we may write this as:}
+\begin{gather*}
+	I \propto \frac{1}{r^2} \implies \Delta I = \frac{d_{B}^2}{d_{A}^2}
+\end{gather*}
+\begin{gather*}
+\Delta I \times d^2_A = d^2_B
+\end{gather*}
+\begin{center}
+$\boxed{ d_B = \sqrt{\Delta I \times d^2_A} = \sqrt{64 \times 50^2Mpc} = 400Mpc}
+$
+\end{center}
 	
 	\section{Deriving Special Relativity}
 	
