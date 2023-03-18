@@ -51,10 +51,37 @@
 	\begin{gather*}
 	F_g = \frac{GMm}{r^2} \implies F_g \propto \frac{1}{r^2}
 	\end{gather*}
+
 	\textbar{One can come about the inverse square law when pondering the geometry of light dispersing out in a three-dimensional space. When light radiates from a point source, it spreads out evenly in all directions, forming a sphere of light. As the sphere expands, the same amount of light is distributed over a larger and larger surface area. Therefore, the light's intensity decreases, with the square of the area, as it travels further away from its light source.}
 	\begin{center}
-		\textit{Area of Sphere = $4\pi r^2, $ where $r$ is the radius}
+		\textit{Surface Area of Sphere = $4\pi r^2, $ where $r$ is the radius}
 	\end{center}
+
+\textbar{Now, we can utilize Maxwell's first equation in integral form to derive the inverse square law.}
+\begin{center}
+\textit{Maxwell's first equation, (refered to as Gauss's law):}
+$\boxed{\int E \cdot d\vec{a}  = \frac{Q_{encl}}{\epsilon_0}}
+$
+
+\end{center} 
+\textit{We may rewrite for the derivation of inverse square law: }
+\begin{gather}
+\iint_{\mathcal{S}_c} E \cdot d\vec{a} = 4\pi \iiint_V \rho dV 
+\end{gather}
+\begin{gather}
+E(r) \iint_{\mathcal{S}_c} d\vec{a} = 4\pi r^2 E(r)
+\end{gather}
+\begin{gather}
+4\pi r^2 E(r) = 4\pi e
+\end{gather}
+\begin{center}
+	$\boxed{E(r) = \frac{e}{r^2}}$
+	
+\end{center}
+
+
+%%%ADD MORE EXPLAINTIONS TO HOW I DERIVIED THIS BEAST%%%
+
 \textbar{From our understanding of inverse square law, we can conclude:}
 	\begin{gather*}
 	I = \frac{L}{4\pi r^2} \implies I \propto \frac{1}{r^2}
@@ -70,7 +97,39 @@
 $\boxed{ d_B = \sqrt{\Delta I \times d^2_A} = \sqrt{64 \times 50^2Mpc} = 400Mpc}
 $
 \end{center}
+\textbar{Using the inverse square law, we deduced that Cluster B is approximately 400 Mpc away from us.}	
+
+\subsection{Cosmological dimming and its influence on the apparent size of distant objects}
+
+\textbar{If one were to probe the sky for these two cosmic objects, one would notice an apparent delta in brightness and size when comparing Cluster A and B. Cluster B would appear noticeably smaller and fainter. We may explain by the inverse square law, for when the light from the galaxies in Cluster has travelled a greater distance throughout space, causing it to become dimmer. As a result, Cluster B takes up a smaller subset of the sky compared to Cluster A. However, if we consider the luminosity of these two clusters, we observe them to be approximately the same.
 	
+The connection between the size of an object and its luminosity can vary depending on the class of cosmic object we are studying. Commonly, larger objects tend to be more luminous than smaller objects of the same kind. The relation exists because larger objects typically have more mass and can generate more energy through nuclear fusion, producing the electromagnetic radiation we observe as luminosity.
+	
+Additionally, it is worth noting that a galaxy cluster's apparent size and brightness are not always directly proportional to its actual size and luminosity. A cluster's observed size and brightness can also be altered by factors such as its distance from us, the presence of foreground or background objects, and the effects of gravitational lensing. To find the average observed size, let us assume the two galaxy clusters are of equal length. With that, we can emanate how much larger Cluster A is in the sky compared with Cluster B.}
+
+\textit{Demonstrating our assumption may be true, considering that we approximated the distance of Cluster B to us to be $400Mpc$:}
+\begin{center}
+	\textit{Assume,} $L \propto \mathcal{S}$
+	
+	$\frac{L_A}{L_B} = \Delta I\frac{d_{A}^2}{d_{B}^2} = 1 
+	$
+	
+	$\boxed{\mathcal{A}_{\mathcal{S}} = \frac{d_B}{d_A} = \frac{50Mpc}{400Mpc} = \frac{1}{8}}
+	$
+\end{center}
+\textit{With this, we deduced that Cluster A amasses eight times more area in the sky than Cluster B. }
+
+
+
+
+
+
+
+
+
+\subsection{Deriving Hubbles constant}
+
+
 	\section{Deriving Special Relativity}
 	
 	
