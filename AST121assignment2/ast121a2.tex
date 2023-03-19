@@ -142,14 +142,139 @@ Additionally, it is worth noting that a galaxy cluster's apparent size and brigh
 	$
 \end{center}
 
-	\section{Deriving Special Relativity}
+	\section{Special Relativity}
 	
-	
-	
-	
-	
-	
-	
-	
+\textbar{Special Relativity, or what Einstein initially called the electrodynamics of moving bodies, is a theory that unites electromagnetism and non-accelerating classical mechanical systems. Special Relativity is particularly useful when describing how the motion of objects appears in different reference frames. However, before delving into its derivation, we must be conscious of the two postulates made for Special Relativity. The first postulate is that all physical laws are the same for all inertia frames of reference, regardless of motion. The second postulate is that the speed of light is constant irrespective of where you are in the vacuum of space. }
+
+\subsubsection{Derivation of the Lorentz Transformation in
+	Einstein’s Theory of Special Relativity}
+
+	\begin{figure}[h]
+	\begin{center}
+		
+		
+		\begin{tikzpicture}
+			\draw[very thick,black](-5.5,5) -- (-4.5,5);
+			\draw[very thick, purple, -] (-5,0) -- node[left]{$x = \frac{ct}{2}$}   (-5,5);
+			\draw[very thick, purple, <->] (-5,1) --   (-5,4);
+			\draw[very thick,black](-5.5,0) -- (-4.5,0);
+			
+		\end{tikzpicture}
+	\end{center}
+\end{figure}
+
+Suppose we are in a hypothetical spacecraft moving at relativistic speed. Our hypothetical spacecraft contains a small light clock visible from the earth, which aids us in visualizing the differences observed from within and outside the spacecraft. From within the spaceship, we find a light source and two mirrors reflecting the light back and forth. Therefore, according to the observer in the rocket, the light travels in a straight line. 
+
+	\begin{figure}[h]
+	\begin{center}	
+		\begin{tikzpicture}
+			\draw[very thick,black](-4.5,5) -- (-3.5,5);
+			\draw[very thick, purple, ->] (-5,0) -- node[left]{}   (-4,5);
+			\draw[very thick,black](-5.5,0) -- (-4.5,0);
+			\draw[very thick, purple, ->] (-4,5) --  (-3,0);
+
+			\draw[very thick,black](-2.5,0) -- (-3.5,0);
+		\end{tikzpicture}	
+	\end{center}
+\end{figure}
+
+However, from an external observer, let us say we find a contradiction. The light appears not to be travelling in a straight path. With this, we can divide our triangle in two to form a right-angle triangle. We can subsequently use the Pythagorean theorem:
+
+\begin{gather*}
+	x^2 =  \left(\frac{ct'}{2}\right)^2 - \left(\frac{vt'}{2}\right)^2
+\end{gather*}
+\begin{gather*}
+x^2 = \frac{c^2{t'}^2}{4} - \frac{v^2{t'}^2}{4}
+\end{gather*}
+\textit{We know in the other reference frame $x = \frac{ct}{2}$. Thus:}
+\begin{gather*}
+	\left(\frac{ct}{2}\right)^2 = \frac{c^2{t'}^2 - v^2{t'}^2}{4} 
+\end{gather*}
+\begin{gather*}
+	\frac{c^2t^2}{4} = \frac{{t'}^2(c^2 - v^2)}{4} 
+\end{gather*}
+\begin{gather*}
+	c^2t^2 = {t'}^2(c^2-v^2)
+\end{gather*}
+\begin{gather*}
+	\frac{c^2t^2}{c^2 - v^2} = {t'}^2
+\end{gather*}
+\begin{gather*}
+	{t'}^2 = \frac{t^2}{1 - \frac{v^2}{c^2}}
+\end{gather*}
+\begin{gather*}
+\frac{{t'}}{t} = \sqrt{\frac{1}{1 - \frac{v^2}{c^2}}}
+\end{gather*}
+\textit{We know $\gamma = \frac{t'}{t}$, thus:}
+\begin{center}
+	$\boxed{ \gamma = {\frac{1}{\sqrt{1 - \frac{v^2}{c^2}}}}}
+	$
+\end{center}
+
+\subsubsection{Derivation of relativistic doppler shift}
+
+
+How does this impact the wavelength of photons emitted by objects at such speeds? For this, we must derive the relativistic doppler shift. 
+
+\textit{Let, $\beta = \frac{v^2}{c^2}$}
+
+\begin{gather*}
+\Lambda_{00} = \gamma \implies \Lambda_{0i} = \Lambda_{i0} = -\gamma\beta_i \implies 	\Lambda_{ij} = (\gamma - 1)\left(\frac{\beta_i\beta_j}{\beta^2}\right) + \delta_{ij}
+\end{gather*}
+\begin{gather*}
+\Lambda = \begin{bmatrix} \gamma & -\gamma\beta & 0 & 0 \\
+	-\gamma\beta & \gamma & 0 & 0 \\
+	0 & 0 & 1 & 0 \\
+	0 & 0 & 0 & 1
+\end{bmatrix} \implies 	x = \begin{bmatrix} hf_0 \\ -hf_0 \\ 0 \\ 0
+\end{bmatrix} x' = \begin{bmatrix} hf_s \\ -hf_s \\ 0 \\ 0 \end{bmatrix}
+\end{gather*}
+\begin{gather*}
+x' = \Lambda x \implies  \begin{bmatrix} hf_s \\ -hf_s \\ 0 \\ 0 \end{bmatrix} = \begin{bmatrix} \gamma & -\gamma\beta & 0 & 0 \\
+	-\gamma\beta & \gamma & 0 & 0 \\
+	0 & 0 & 1 & 0 \\
+	0 & 0 & 0 & 1
+\end{bmatrix} \begin{bmatrix} hf_0 \\ -hf_0 \\ 0 \\ 0
+\end{bmatrix} 
+\end{gather*}
+\begin{gather*}
+\begin{bmatrix} \gamma h f_0 + \gamma\beta h f_0 \\ -(\gamma\beta hf_0 + \gamma h f_0) \\ 0 \\ 0\end{bmatrix} = \gamma(\beta + 1) \begin{bmatrix} hf_0 \\ -hf_0 \\ 0 \\ 0 \end{bmatrix}
+\end{gather*}
+\textit{With this, we may rewrite this expression as:}
+\begin{gather*}
+\frac{1}{f_0} = \gamma\frac{1}{f_s} + \gamma\beta\frac{1}{f_s} \implies \frac{f_s}{f_0} = \gamma + \gamma\beta
+\end{gather*}
+\begin{gather*}
+\frac{f_s}{f_0} = \gamma(1+\beta) = \frac{1}{\sqrt{1-\beta^2}}(1+\beta)
+\end{gather*}
+\begin{gather*}
+	\frac{f_s}{f_0} = \frac{1+\beta}{\sqrt{1-\beta^2}} = \frac{1+\beta}{\sqrt{(1-\beta)(1+\beta)}} = \frac{\sqrt{1+\beta}}{\sqrt{1-\beta}}
+\end{gather*}
+\begin{center}
+	$\boxed{\frac{f_s}{f_0} = \sqrt{\frac{1+\beta}{1-\beta}}}
+	$
+\end{center}
+\textit{We can also correspond this to the wavelength in the relativistic longitudinal doppler effect: }
+\begin{center}
+	$\boxed{\frac{\lambda_s}{\lambda_0} = \sqrt{\frac{1+\beta}{1-\beta}}}
+$
+\end{center}
+
+To understand these derivations further, let us think of scenarios where we observe objects moving at relativistic speeds. Therefore we shall comprise various situations where this may be useful.
+
+\subsection{Relativistic Doppler Shift Calculation for Two Approaching Spaceships}
+
+Two spaceships (A and B) approach you at 9/10ths the speed of light (0.9c) from opposite directions. They send out radio messages. What speed does one measure for the radio waves from A and B? 
+
+
+Considering the second postulate of special relativity, we assume the speed of light is constant irrespective of where you are in the vacuum of space. Therefore, since radio waves are electromagnetic radiation, that implies that the radiowaves travels at the speed of light in a vacuum. Therefore, the speed at which we measure the radiowaves emitted by Rocket A and B are the same and are travelling at the speed of light $c$. 
+
+
+Now what would be the speed of the radio waves from A as measured by B? Since the speed of light is constant for each observer, we may also conclude that the rockets measure each other's radiowaves to be the speed of light $c$.
+
+
+What is the speed that Spaceship B measures your motion? Considering that each observer is in an inertial frame of reference, each object in this scenario seems to be at rest while the other objects are moving. Therefore, since Spaceship B appears to be approaching the earth at $0.9c$, we know that according to the rocket, it seems the earth is moving towards it at $0.9c$. Thus, Spaceship B measures my motion to be $0.9c$.
+
+\subsubsection{How fast does Spaceship B observe Spaceship A to be moving?}
 	\section{A Solution to Einsteins Field Equations}
 \end{document}
