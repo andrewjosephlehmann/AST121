@@ -256,9 +256,18 @@ x' = \Lambda x \implies  \begin{bmatrix} hf_s \\ -hf_s \\ 0 \\ 0 \end{bmatrix} =
 \end{center}
 \textit{We can also correspond this to the wavelength in the relativistic longitudinal doppler effect: }
 \begin{center}
-	$\boxed{\frac{\Delta\lambda}{\lambda_0} = \sqrt{\frac{1+\beta}{1-\beta}}}
+	$\boxed{\frac{\delta\lambda}{\lambda_0} = \sqrt{\frac{1+\beta}{1-\beta}}}
 $
 \end{center}
+\newpage
+It is also important to note that at higher values of $\beta$, the difference between Classical Doppler Shift and Relativistic Doppler becomes pronounced.
+\begin{center}
+
+	\includegraphics[width=0.5\linewidth]{../../../../ReldopvsCdop}
+
+\end{center}
+
+
 
 To understand these derivations further, let us think of scenarios where we observe objects moving at relativistic speeds. Therefore we shall comprise various situations where this may be useful.
 
@@ -294,18 +303,145 @@ Assume the radio messages are emitted from the spaceships with a rest wavelength
 
 Previously we concluded that Spaceship A was travelling towards us at a speed of 0.9c. With our derivation of the doppler shift, we can find the observed wavelength of the radio wave.
 \begin{gather*}
-	\frac{\Delta\lambda}{\lambda_0} = \sqrt{\frac{1+\beta}{1-\beta}} \implies 	\Delta\lambda= \lambda_0\sqrt{\frac{1+\beta}{1-\beta}}
+	\frac{\delta\lambda}{\lambda_0} = \sqrt{\frac{1+\beta}{1-\beta}} \implies 	\delta\lambda= \lambda_0\sqrt{\frac{1+\beta}{1-\beta}}
 \end{gather*}
 
-With this information, we can deduce that the observed wavelength will be the initial wavelength minus the initial wavelength.
+With this information, we can deduce that the observed wavelength:
+%%%%%% REVIEW THIS BEFORE SUBMITING %%%
+
+\begin{center}
+	$
+	\boxed{\delta\lambda = \lambda_0\sqrt{\frac{1+\beta}{1-\beta}} =(1.0\times10^{-2}m) \sqrt{\frac{1+\frac{-0.9c}{c}}{1-\frac{-0.9c}{c}}}=2.3\times10^{-3}m}
+	$
+
+\end{center}
+Since Spaceship B travels towards us at the same speed as Spaceship A, this implies that the observed wavelength of the radiowaves from Spaceship B will be equivalent to that of A. 
+
+What is the Doppler Shift that A would observe in Spaceship B? 
+
+\begin{center}
+	$
+	\boxed{\delta\lambda = \lambda_0\sqrt{\frac{1+\beta}{1-\beta}} =(1.0\times10^{-2}m) \sqrt{\frac{1+\frac{-0.9945c}{c}}{1-\frac{-0.9945c}{c}}}=5.3\times10^{-4}m}
+	$
+	
+\end{center}
+
+
+
+
+	\section{Quasars and the implications of high redshifts}
+	
+\textbar{When peering into the center of galaxies, what is often encountered are massive objects known as Quasars. These are shining objects typically found at the centers of galaxies. Initially known as quasi-stellar objects, later, it was realized that their light is emitted from an accretion disk of gas orbiting in close proximity to supermassive black holes. On occurrence, the redshifts of quasars can be as high as four or greater. Allow us to explore this concept and further comprehend how it contributes to our understanding of the workings of quasars and the expansion of the cosmos at large. 
+	
+Since we know a subset of Quasars has a redshift of four or more. We can use the equations for Schwarzschild radius and its relation to redshift to find how close the accretion disk must sit relative to the blackhole to emit electromagnetic spectra with a redshift of four or more. 
+}
+
+\textit{Let,}
+\begin{gather*}
+	z = {\left(1-\frac{2GM}{rc^2}\right)^{\frac{-1}{2}} - 1}
+\end{gather*}
+\textit{and,}
+\begin{gather*}
+	\mathcal{R}_s = \frac{2GM}{c^2}
+\end{gather*}
+Now let us rearrange:
+\begin{gather*}
+	z+1 =  {\left(1-\frac{2GM}{rc^2}\right)^{\frac{-1}{2}} \implies \frac{1}{(z+1)^2} = 1 - \frac{2GM}{rc^2} \implies \frac{2GM}{rc^2} = 1 - \frac{1}{(z+1)^2} }
+\end{gather*}
+\begin{gather*}
+	\frac{2GM}{rc^2} = 1 - \frac{1}{(z+1)^2} \implies \frac{2GM}{c^2} = \left(1-\frac{1}{(z+1)^2}\right)r
+\end{gather*}
+\textit{Since, $\mathcal{R}_s = \frac{2GM}{c^2}$, then:}
+\begin{gather*}
+	\mathcal{R}_s =  \left(\frac{1}{1-\frac{1}{(z+1)^2}}\right)r \implies \mathcal{R}_s\left(\frac{1}{1-\frac{1}{(z+1)^2}}\right) = r \implies \frac{r}{\mathcal{R}_s} = \left(\frac{1}{1-\frac{1}{(z+1)^2}}\right) 
+\end{gather*}
+
+Let $z = 4$
+\begin{center}
+	$\boxed{\frac{r}{\mathcal{R}_s} = \left(\frac{1}{1-\frac{1}{(z+1)^2}}\right) = \left(\frac{1}{1-\frac{1}{(4+1)^2}}\right) = \frac{25}{24}}
+	$
+\end{center}
+
+
+\textbar{I find this to be a surprising result mainly since this implies that the emission of the photon lay beyond the innermost stable orbit of the black hole. Hence, the photons that are emitted beyond a point where there is not enough angular momentum for them to escape the gravitational pull. In other words, the photons would have to orbit the black hole faster than the speed of light to escape. For a non-rotating black hole, the ISCO lies at a minimum of 3 Schwarzchild radius $\mathcal{R}_s$, and for a rotating black hole, the ISCO lies at a minimum of 4.5 Schwarzchild radii $\mathcal{R}_s$.}
+\begin{center}
+	
+	\includegraphics[width=0.5\linewidth]{../../../../RedshiftSchwarz}
+
+	\label{fig:redshiftschwarz}
+\end{center}
+
+With this graph in mind, let us find the maximum redshift of a photon for non-rotating and rotating black holes. To uncover this, we take the inverse of the equation for Schwarzschild radius: 
 
 \begin{gather*}
-	$
-	\lambda = \lambda_0 - \Delta\lambda \implies 
-$
+	\mathcal{R}_s = \left(1-\frac{1}{(z+1)^2}\right)r \implies \frac{\mathcal{R}_s}{r} = 1 - \frac{1}{(z+1)^2} \implies \frac{\mathcal{R}_sr(z+1)^2}{r} - \frac{r(z+1)^2}{\mathcal{R}_s} = -\frac{r(z+1)^2}{\mathcal{R}_s(z+1)^2}
+\end{gather*}
+\begin{gather*}
+	(z+1)^2 - \frac{r}{\mathcal{R}_s(z+1)^2} = \frac{-r}{\mathcal{R}_s} \implies (z+1)^2 - \frac{r}{\mathcal{R}_s(z+1)^2} + \frac{r}{\mathcal{R}_s} = 0 
+\end{gather*}
+Using the quadratic equation, we may rewrite the expression as: 
 
+\begin{center}
+$\boxed{z = - \frac{\frac{r}{\mathcal{R}_s}-1-\sqrt{\frac{r}{\mathcal{R}_s}(\frac{r}{\mathcal{R}_s}-1)}}{\frac{r}{\mathcal{R}_s}-1}}
+$
+\end{center}
+Now we can insert the ISCO for non-rotating blackhole to find it's maximum redshift: 
+\begin{center}
+$\boxed{z = - \frac{3-1-\sqrt{3(3-1)}}{3-1} = \frac{-2+\sqrt{6}}{2} \approx 0.225}
+$
+\end{center}
+Now let us find the maximum redshift for a rotating blackhole:
+\begin{center}
+	$\boxed{z = - \frac{4-1-\sqrt{4(4-1)}}{4-1} = \frac{-3+2\sqrt{3}}{3} \approx 0.134}
+	$
+\end{center}
+
+
+These results allude that the redshift we observe is not solely from the gravitational redshift, but rather, the quasar is moving away from us at high velocities. Let us use our derivation of the relativistic doppler shift and relay it to the redshift:
+
+\begin{gather*}
+	\frac{\delta\lambda}{\lambda_0} = \sqrt{\frac{1+\beta}{1-\beta}} \implies z + 1 = \sqrt{\frac{1+\beta}{1-\beta}} = \sqrt{\frac{c+v}{c-v}}
 \end{gather*}
 
+\begin{center}
+	$\boxed{z= \sqrt{\frac{c+v}{c-v}} - 1}
+	$
+\end{center}
 
-	\section{A Solution to Einsteins Field Equations}
+Let us rewrite this expression in terms of velocity: 
+%v = \frac{z(z+2)}{z^2+2z+2}
+\begin{gather*}
+z = \sqrt{\frac{c+v}{c-v}} - 1 \implies v = \left(\frac{z(z+2)}{z^2+2z+2}\right)c
+\end{gather*}
+
+\begin{center}
+	$\boxed{v = \left(\frac{z(z+2)}{z(z+2)+2}\right)c}
+	$
+\end{center}
+\begin{center}
+	
+	\includegraphics[width=0.5\linewidth]{../../../../RecessionVel}
+	\label{fig:recessionvel}
+\end{center}
+Since we observed the redshift of the quasar to be $z=4$, then:
+
+\begin{center}
+	$\boxed{v = \left(\frac{z(z+2)}{z(z+2)+2}\right)c = \left(\frac{4(4+2)}{4(4+2)+2}\right)c = \frac{12}{13}c \approx 0.923c}
+	$
+\end{center}
+
+Since we often observe many Quasars from redshifts of $z=0.05$ to $z = 8$, then this observed phenomenon is conceivable to be an artifact of an expanding universe. 
+
+
+
+
+
+
+
+
+
+
+
+
+
 \end{document}
