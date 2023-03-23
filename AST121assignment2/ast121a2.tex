@@ -32,6 +32,10 @@
 \makeatother
 
 \renewcommand{\span}{...}
+\usepackage{biblatex}
+
+
+
 
 
 \title{AST121: Assignment 2}
@@ -40,7 +44,9 @@
 
 \begin{document}
 	\maketitle
-	\textit{Assignment 2 iterates upon the concepts introduced in Assignment 1. Hence it is advised to read Assignment 1 before Assignment 2. }
+
+	
+	\newpage
 	\tableofcontents
 	\newpage 
 	\section{Calculation of distance, size, and Hubble Constant for two galaxy clusters}
@@ -105,7 +111,7 @@ $
 	
 The connection between the size of an object and its luminosity can vary depending on the class of cosmic object we are studying. Commonly, larger objects tend to be more luminous than smaller objects of the same kind. The relation exists because larger objects typically have more mass and can generate more energy through nuclear fusion, producing the electromagnetic radiation we observe as luminosity.
 	
-Additionally, it is worth noting that a galaxy cluster's apparent size and brightness are not always directly proportional to its actual size and luminosity. A cluster's observed size and brightness can also be altered by factors such as its distance from us, the presence of foreground or background objects, and the effects of gravitational lensing. To find the average observed size, let us assume the two galaxy clusters are of equal length. With that, we can emanate how much larger Cluster A is in the sky compared with Cluster B.}
+Additionally, it is worth noting that a galaxy cluster's apparent size and brightness are not always directly proportional to its actual size and luminosity. A cluster's observed size and brightness can also be altered by factors such as its distance from us, the presence of foreground or background objects, and the effects of gravitational lensing. To find the average observed size, let us assume the two galaxy clusters are of equal length. With that, we can emanate how much smaller Cluster B is in the sky compared with Cluster A.}
 
 \textit{Demonstrating our assumption may be true, considering that we approximated the distance of Cluster B to us to be $400Mpc$:}
 \begin{center}
@@ -124,14 +130,14 @@ Additionally, it is worth noting that a galaxy cluster's apparent size and brigh
 \subsection{Calculating the Hubble Constant from redshift and distance}
 \textbar{We observe the redshift of Cluster B to be $z_B = 0.1$. With this information, we must relate the redshift to our equations with relativistic redshift to find the Hubble constant.}
 \begin{center}
-	\textit{Let us define Hubble's constant to be,  }$H_0 = \frac{v}{d}$, and relatistic redshift to be, $z = \frac{v}{c}. $
+	\textit{Let us define Hubble's constant to be,  }$H_0 = \frac{v}{d}$, and redshift to be, $z = \frac{v}{c}. $
 \end{center}
 	\textit{Thus,}
 \begin{gather*}
 	H_0 = \frac{v}{d} = \frac{cz}{d}
 \end{gather*}
 \begin{center}
-\boxed{H_0 = \frac{cz_B}{d_B} = \frac{(3\times10^6km/s)(0.1)}{400Mpc} = 75kms^{-1}/Mpc}
+\boxed{H_0 = \frac{cz_B}{d_B} = \frac{(3\times10^5km/s)(0.1)}{400Mpc} = 75kms^{-1}/Mpc}
 \end{center}
 \textbar{Now we know that the Hubble constant, we can find the redshift of Cluster A. So let us solve for the redshift with our derivation of the relation of Hubbles constant to relativistic redshift.}
 \begin{gather*}
@@ -363,7 +369,7 @@ Let $z = 4$
 \end{center}
 
 
-\textbar{I find this to be a surprising result mainly since this implies that the emission of the photon lay beyond the innermost stable orbit of the black hole. Hence, the photons that are emitted beyond a point where there is not enough angular momentum for them to escape the gravitational pull. In other words, the photons would have to orbit the black hole faster than the speed of light to escape. For a non-rotating black hole, the ISCO lies at a minimum of 3 Schwarzchild radius $\mathcal{R}_s$, and for a rotating black hole, the ISCO lies at a minimum of 4.5 Schwarzchild radii $\mathcal{R}_s$.}
+\textbar{I find this to be a surprising result mainly since this implies that the emission of the photon lay beyond the photon sphere of the black hole. Hence, the photons that are being emitted beyond a point where there is not enough angular momentum for them to escape the gravitational pull. In other words, the photons would have to orbit the black hole faster than the speed of light to escape. For a Schwazchild black hole, the photon sphere lies at $\frac{3r_s}{2}$.
 \begin{center}
 	
 	\includegraphics[width=0.5\linewidth]{../../../../RedshiftSchwarz}
@@ -371,7 +377,7 @@ Let $z = 4$
 	\label{fig:redshiftschwarz}
 \end{center}
 
-With this graph in mind, let us find the maximum redshift of a photon for non-rotating and rotating black holes. To uncover this, we take the inverse of the equation for Schwarzschild radius: 
+With this graph in mind, let us find the maximum redshift of a photon for Schwarzchild black hole. To uncover this, we take the inverse of the equation for Schwarzschild radius: 
 
 \begin{gather*}
 	\mathcal{R}_s = \left(1-\frac{1}{(z+1)^2}\right)r \implies \frac{\mathcal{R}_s}{r} = 1 - \frac{1}{(z+1)^2} \implies \frac{\mathcal{R}_sr(z+1)^2}{r} - \frac{r(z+1)^2}{\mathcal{R}_s} = -\frac{r(z+1)^2}{\mathcal{R}_s(z+1)^2}
@@ -385,15 +391,10 @@ Using the quadratic equation, we may rewrite the expression as:
 $\boxed{z = - \frac{\frac{r}{\mathcal{R}_s}-1-\sqrt{\frac{r}{\mathcal{R}_s}(\frac{r}{\mathcal{R}_s}-1)}}{\frac{r}{\mathcal{R}_s}-1}}
 $
 \end{center}
-Now we can insert the ISCO for non-rotating blackhole to find it's maximum redshift: 
+Now we can insert the radius of photon sphere to find it's maximum redshift of photons emitted from blackhole: 
 \begin{center}
-$\boxed{z = - \frac{3-1-\sqrt{3(3-1)}}{3-1} = \frac{-2+\sqrt{6}}{2} \approx 0.225}
+$\boxed{z = - \frac{\frac{3}{2}-1-\sqrt{\frac{3}{2}(\frac{3}{2}-1)}}{\frac{3}{2}-1} = \frac{21}{29} \approx 0.724}
 $
-\end{center}
-Now let us find the maximum redshift for a rotating blackhole:
-\begin{center}
-	$\boxed{z = - \frac{4-1-\sqrt{4(4-1)}}{4-1} = \frac{-3+2\sqrt{3}}{3} \approx 0.134}
-	$
 \end{center}
 
 
@@ -430,18 +431,188 @@ Since we observed the redshift of the quasar to be $z=4$, then:
 	$
 \end{center}
 
-Since we often observe many Quasars from redshifts of $z=0.05$ to $z = 8$, then this observed phenomenon is conceivable to be an artifact of an expanding universe. 
+With this simple calculation, we have determined that this quasar is moving away from us at a relativistic speed. Furthermore, we often observe many Quasars from redshifts of $z=0.05$ to $z=8$, and thus this phenomenon is conceivable to be an artifact of an expanding universe. 
+
+\section{The Scale Factor}
+
+\begin{gather*}
+a \propto t^{\frac{2}{3}} \implies a = kt^{\frac{2}{3}} \implies \frac{a_0}{a_1} = \frac{t_0^{\frac{2}{3}}}{t_1^{\frac{2}{3}}}
+\end{gather*}
+\textit{We know $a_0=1$, thus:}
+\begin{gather*}
+\frac{1}{a_1} = \frac{t_0^{\frac{2}{3}}}{t_1^{\frac{2}{3}}} \implies a_1 = \frac{t_1^{\frac{2}{3}}}{t_0^{\frac{2}{3}}}
+\end{gather*}
+\textit{The relation of scale factor and redshift is $a = \frac{1}{1+z}$:}
+\begin{gather*}
+\frac{1}{1+z} = \frac{t_1^{\frac{2}{3}}}{t_0^{\frac{2}{3}}} (1+z) \implies z = \frac{t_0^{\frac{2}{3}}}{t_1^{\frac{2}{3}}} - 1
+\end{gather*}
+\textit{Let us rearrange for $t_1$}
+\begin{gather*}
+\frac{1}{1+z} = \frac{t_1^{\frac{2}{3}}}{t_0^{\frac{2}{3}}} \implies t_1^{\frac{2}{3}} = \left(t_0^{\frac{2}{3}}\right)\left(\frac{1}{1+z}\right) \implies t_1 = \left(\frac{t_0^{\frac{2}{3}}}{1+z}\right)^{\frac{3}{2}}
+\end{gather*}
+\subsubsection{Relativistic Hubbles Constant}
+Before estimating the universe's age, let us revise our equation for Hubble Constant by applying our derivations of relativistic doppler shift. Initially, we utilized an approximation for the doppler shift at beta $\beta$ near values of zero, this is otherwise known as the classical doppler shift. $ z =\frac{v}{c}$. Therefore let us look back and rederive the doppler shift to deal with higher speeds to have a more precise Hubble constant. Which in turn allows us to probe the age of the universe in a more accurate manner.
+\begin{center}
+	$\boxed{
+H_0 = \frac{v}{d} = \frac{ \left(\frac{z(z+2)}{z(z+2)+2}\right)c }{d} = \frac{ \left(\frac{0.1(0.1+2)}{0.1(0.1+2)+2}\right)c }{400Mpc} = 71.27 kms^{-1}/Mpc}
+$
+\end{center}
+\subsubsection{Hubble Time}
+\textbar{To find the universe's age, let us utilize time in relation to the hubbles constant}.
+
+\textit{We previously found the Hubble constant to be $75kms^{-1}/Mpc$, thus:}
+\begin{center}
+	$\boxed{
+	t_0 = \frac{d}{v}=\frac{1}{H_0} = \frac{3.086\times10^{19}km}{71.27kms^{-1}/Mpc} = 4.33\times10^{17}s}
+	$
+\end{center}
+Let us rewrite this in terms of years rather than seconds.
+\begin{center}
+	$\boxed{
+		t_0 = \frac{d}{v}=\frac{1}{H_0}= \frac{3.086\times10^{19}km}{71.27kms^{-1}/Mpc}\left(\frac{1}{(5^5\times4^4\times3^3\times2^2\times1^1)(10^{-3})(365)}\right)=13.73\times10^9yrs=13.73Gyrs}
+	$
+\end{center}
+This approximation of the universe's age lays the foundation for us to probe the universe's age at various redshifts. Therefore when observing these redshifts, we begin to comprehend how old the light is relative to us.
+\subsection{The relation between the redshift of light and the age of the universe}
+
+\textbar{In the previous section, we alluded to the notion of an expanding universe, due to the relativistic recession speed of the Quasar. With the redshift initially provided, we may find the age of the light we observe emitted from sed Quasar:}
+\begin{center}
+	$\boxed{ t_1 = \left(\frac{\left(\frac{1}{H_0}\right)^{\frac{2}{3}}}{1+z_Q}\right)^{\frac{3}{2}} = \left(\frac{\left(13.73Gyrs\right)^{\frac{2}{3}}}{1+4}\right)^{\frac{3}{2}} \approx 1.23Gyrs}$
+\end{center}
+From this, we can convey that the age we observe in light from the Quasar is approximately 1.17 billion years old. Let us also choose arbitrary values of redshift $z$ and see how their age differs.
+
+\textit{Choose $z = 0.5$}
+\begin{center}
+	$\boxed{ t_1 = \left(\frac{\left(\frac{1}{H_0}\right)^{\frac{2}{3}}}{1+z}\right)^{\frac{3}{2}} = \left(\frac{\left(13.73Gyrs\right)^{\frac{2}{3}}}{1+0.5}\right)^{\frac{3}{2}} = 7.47Gyrs}$
+\end{center}
+
+\textit{Choose $z = 1.0$}
+\begin{center}
+	$\boxed{ t_1 = \left(\frac{\left(\frac{1}{H_0}\right)^{\frac{2}{3}}}{1+z}\right)^{\frac{3}{2}} = \left(\frac{\left(13.73Gyrs\right)^{\frac{2}{3}}}{1+1}\right)^{\frac{3}{2}} = 4.85Gyrs}$
+\end{center}
+
+\textit{Choose $z = 3.0$}
+\begin{center}
+	$\boxed{ t_1 = \left(\frac{\left(\frac{1}{H_0}\right)^{\frac{2}{3}}}{1+z}\right)^{\frac{3}{2}} = \left(\frac{\left(13.73Gyrs\right)^{\frac{2}{3}}}{1+3}\right)^{\frac{3}{2}} = 1.72Gyrs}$
+\end{center}
+
+\textit{Choose $z = 10$}
+\begin{center}Voro
+	$\boxed{ t_1 = \left(\frac{\left(\frac{1}{H_0}\right)^{\frac{2}{3}}}{1+z}\right)^{\frac{3}{2}} = \left(\frac{\left(13.73Gyrs\right)^{\frac{2}{3}}}{1+10}\right)^{\frac{3}{2}} = 0.38Gyrs}$
+\end{center}
+
+\textit{Choose $z = 100$}
+\begin{center}
+	$\boxed{ t_1 = \left(\frac{\left(\frac{1}{H_0}\right)^{\frac{2}{3}}}{1+z}\right)^{\frac{3}{2}} = \left(\frac{\left(13.73Gyrs\right)^{\frac{2}{3}}}{1+100}\right)^{\frac{3}{2}} = 0.01Gyrs}$
+\end{center}
+Perhaps it is more convenient to make a simple graph of this relation. 
+
+\begin{center}
+\includegraphics[width=0.5\linewidth]{../../../../agevredshift}
+\end{center}
+
+\section{The Early Universe}
+\subsubsection{The Mass Energy Equivalence}
+\begin{gather*}
+KE = W = \int_{x_1}^{x_2} Fdx
+\end{gather*}
+Making use of Newtons second law to rewrite the force as the rate of change of momentum. 
+\begin{gather*}
+	KE = W = \int_{x_1}^{x_2} \left(\frac{dp}{dt}\right)dx
+\end{gather*}
+\textit{We also know that momentum is defined as $p=mv$:}
+\begin{gather*}
+	p = m\left(\frac{dx}{dt_0}\right) = m\left(\frac{dx}{dt}\right)\left(\frac{dt}{dt_0}\right) \implies \gamma m \left(\frac{dx}{dt}\right) = \gamma mv = p
+\end{gather*}
+Now we have an expression for the relativistic momentum, we may differentiate with respect to t, to find the relativistic force acting on our object.
+\begin{gather*}
+	\frac{dp}{dt} = \frac{d}{dt}\left(\frac{mv}{\sqrt{1-\frac{v^2}{c^2}}}\right) = m\frac{d}{dt}\left(v\left(1-\frac{v^2}{c^2}\right)^{\frac{-1}{2}}\right) = m\frac{dv}{dt}\left(1-\frac{v^2}{c^2}\right)^{\frac{-1}{2}} + mv\frac{d}{dt}\left(1-\frac{v^2}{c^2}\right)^{\frac{-1}{2}}
+\end{gather*}
+\begin{gather*}
+	\frac{dp}{dt} = m\frac{dv}{dt}\left(1-\frac{v^2}{c^2}\right)^{\frac{-1}{2}} + \frac{mv^2}{c^2}\frac{dv}{dt}\left(1-\frac{v^2}{c^2}\right)^{\frac{-3}{2}} = m\frac{dv}{dt}\left[\frac{1-\frac{v^2}{c^2}+\frac{v^2}{c^2}}{\left(1-\frac{v^2}{c^2}\right)}\right] = \gamma^3m\frac{dv}{dt}
+\end{gather*}
+\textit{With this, we may now insert this back into our integral to find the kinetic energy of such moving objects.}
+\begin{gather*}
+	KE = \int_{x_1}^{x_2} \gamma^3m\left(\frac{dv}{dt}\right)dx
+\end{gather*}
+\textit{Integrating with respect to $v$}
+\begin{center}
+	$
+\boxed{KE = \int_{0}^{v} \left(\frac{mv}{\left(1-\frac{v^2}{c^2}\right)^{\frac{3}{2}}}\right)dv = \frac{mc^2}{\sqrt{1-{\frac{v^2}{c^2}}}} -mc^2 = \gamma mc^2 - mc^2 = mc^2(\gamma - 1)}
+$
+\end{center}
+\textit{Now, let us rewrite for the total energy:}
+\begin{gather*}
+KE = \gamma mc^2 - mc^2 \implies KE + mc^2 = \gamma mc^2
+\end{gather*}
+\textit{Thus:}
+\begin{center}
+$\boxed{E = \gamma mc^2}
+$
+\end{center}
+With the mass-energy equivalence, we may find the total energy content of particles with mass. For instance, let us take a baryon-antibaryon pair, the electron and positron. If they were to collide, their energy would be translated into mass. 
+\subsubsection{Electron-positron pair}
+\textit{Mass of electron and positron is "$9.11\times10^{-31}kg$"	(Guidry, M. W. Modern General Relativity). Thus, the energy released when these particles annihilate is:}
+\begin{center}
+$\boxed{E = 2mc^2 = 2(9.11\times10^{-31}kg)(3\times10^8m/s)^2 = 1.64\times10^{-13}J}
+$
+\end{center}
+Utilizing Boltzmann's constant, we may find the temperature of such an event.
+\begin{gather*}
+E = kT \implies T = \frac{E}{k}
+\end{gather*}
+\textit{Let $k = 1.38065\times10^{-23}JK^{-1}$
+}
+\begin{center}
+	$\boxed{T = \frac{E}{k} = \frac{1.64\times10^{-13}J}{1.38\times10^{-23}JK^{-1}}=1.90\times10^{10}K}
+	$
+\end{center}
+\subsubsection{Proton-antiproton pair}
+\textit{Mass of proton and antiproton is $1.67\times10^{-27}kg$. Thus, the energy released when these particles annihilate is:}
+\begin{center}
+$\boxed{E = 2mc^2 = 2(1.67\times10^{-27}kg)(3\times10^8m/s)^2 = 3.00\times10^{-10}J}
+$
+\end{center}
+Utilizing Boltzmann's constant, we may find the temperature of such an event.
+
+\textit{Let $k = 1.38065\times10^{-23}JK^{-1}$
+}
+\begin{center}
+	$\boxed{T = \frac{E}{k} = \frac{3.00\times10^{-10}J}{1.38\times10^{-23}JK^{-1}}=2.17\times10^{13}K}
+	$
+
+\end{center}
+
+The temperatures we uncovered may hint at the temperatures in the very early universe when particles came in and out of existence. These results may be somewhat may yield similar conditions found inside the particle colliders at the LHC. According to CERN, the LHC reached a temperature of five trillion Kelvin, nearly 265 times hotter than the temperature we found for the electron-positron pair. Furthermore, the annihilation between the proton-antiproton is approximately four greater than that of the highest temperature at the LHC as of 2012. 
+
+Now we can also compare the temperatures we found to that of the core of our sun. According to NASA, the sun's core sits at a temperature of around 15 million kelvin. The temperature released from the annihilation of proton-antiproton indicates that it's 1.5 million times hotter than the sun's temperature. In addition, the temperature released from the annihilation of electron-positron is nearly 1300 times warmer than the sun's core. 
+
+This temperature difference indicates that the current universe is far cooler than it once was long ago. The main reason we achieve such high temperatures at the LHC is that it was designed to simulate the conditions of the early universe.
 
 
+\newpage
+\begin{center}
+	\section{References}
+\end{center}
+
+%\bibliographystyle{}
+
+For one reason or another, the BibTex plugin is not working on my computer, will be fixed in future. Therefore I am unable to utilize a UofT-approved citation style properly. So, for now, here are the references used in the paper.
 
 
+Zur elektrodynamik bewegter körper
 
+A Einstein
 
+Annalen der physik 4, 1905
 
+“Sun.” NASA, NASA, solarsystem.nasa.gov/solar-system/sun/overview/. 
 
+“Meet the Constants.” NIST, 19 Dec. 2019, www.nist.gov/si-redefinition/meet-constants.  
 
+“A New World Record for CERN at 60 Years Old.” CERN, https://home.cern/news/news/accelerators/new-world-record-cern-60-years-old.
 
+“Electron.” Encyclopædia Britannica, Encyclopædia Britannica, Inc., www.britannica.com/science/electron.  
 
-
-
+“Proton.” Encyclopædia Britannica, Encyclopædia Britannica, Inc., 3 Feb. 2023, www.britannica.com/science/proton-subatomic-particle. 
 \end{document}
