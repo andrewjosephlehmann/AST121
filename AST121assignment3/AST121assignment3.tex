@@ -44,12 +44,230 @@
 
 \begin{document}
 	\maketitle
-		\textit{Assignment 3 iterates upon the concepts introduced in Assignment 2. Hence it is advised to read Assignment 1 before Assignment 3. }
+		\textit{Assignment 3 iterates upon the concepts introduced in Assignment 2. Hence it is advised to read Assignment 2 before Assignment 3. }
 	\tableofcontents
+
+\newpage
+\section{The birth of a rotating blackhole}
+
+A gamma-ray burst known as GRB0303029 was first detected in 2003 by the HETE-2 satellite. It initially observed a redshift of 0.6, now considered lower than initially observed. Let us assume the initial value to be correct and understand its location in space and the burst's energy content.
+
+\subsection{Relating distance to redshift}
+We may employ the Hubble constant and its relation to distance and velocity to uncover the distance to the gamma-ray burst.
+\begin{gather*}
+	H_0 = \frac{v}{d} \implies d = \frac{v}{H_0}
+\end{gather*}
+Now we must insert an expression that describes redshift in the context of relativistic speeds. In the previous assignment, we found the relation of redshift to velocity to be. 
+\begin{center}
+	$\boxed{
+v = \left(\frac{z(z+2)}{z(z+2)+2}\right)c}
+$
+
+\end{center}
+
+\textit{Thus,}
+\begin{gather*}
+	d = \frac{v}{d} = \left(\frac{1}{H_0}\right)\left(\frac{z(z+2)}{z(z+2)+2}\right)c
+\end{gather*}
+\textit{Let z = 0.6,}
+\begin{center}
+	$
+	\boxed{d =  \left(\frac{3.09\times10^{19}km}{71.27\frac{kms^{-1}}{Mpc}}\right)\left(\frac{0.6(0.6+2)}{0.6(0.6+2)+2}\right)(3.00\times10^8ms^{-1}) = 5.69\times10^{25}m}$
+\end{center}
+\textit{Converting this value to lightyears $(ly)$,}
+\begin{center}
+	$\boxed{d = \frac{5.69\times10^{25}m}{(3.00\times10^5ms^{-1})(5^5\times4^4\times3^3\times2^2\times1^1)(365)}=6.02\times10^9ly}
+	$	
+\end{center}
+
+With the components above and the readings of HETE-2, we are supplied with the gamma-ray burst energy to be approximately $2.00\times10^{46}J$. 
+
+\subsection{Relating the inertial mass of the Sun to the energy of the gamma-ray burst}
+Let us assume the sun's mass to be $2.00\times10^{30}kg$ to compare the inertial energy content to the energy found in the GRB. In the previous assignment, we derived the mass-energy equivalence to be:
+\begin{gather*}
+	E = \gamma mc^2
+\end{gather*}
+\textit{Assume the sun to be inertial in our reference frame, thus}
+\begin{center}
+	$\boxed{
+	E = \gamma mc^2 = \frac{1}{\sqrt{1}} mc^2 = (2.00\times10^{30}kg)(3.00\times10^8ms^{-1})^2 = 1.79\times10^{47}J}
+	$
 	
+\end{center}
+
+\textit{Next, let us compute the delta between the two energies.}
+\begin{gather*}
+\Delta E = \frac{E_{sun}}{E_\gamma} = \frac{1.79\times10^{47}J}{2.00\times10^{46}} = 3.6
+\end{gather*}
+Using the mass energy equivalence, let us estimate how much mass comprised this very event. But first, let us compute the recession velocity to find $\gamma$. \textit{Let z = 0.6,}
+
+\begin{gather*}
+	v = \left(\frac{z(z+2)}{z(z+2)+2}\right)c = \left(\frac{0.6(0.6+2)}{0.6(0.6+2)+2}\right)(3.00\times10^8ms^{-1}) = 1.31\times10^8 ms^{-1} = 0.44c
+\end{gather*}
+\textit{Let us use our derivation for $\gamma$,}
+\begin{gather*}
+	\gamma = \frac{1}{\sqrt{1-\frac{v^2}{c^2}}} = \frac{1}{\sqrt{1-\frac{0.44c^2}{c^2}}}=\frac{25\sqrt{14}}{84}\approx1.12
+\end{gather*}
+\textit{Let us uncover the mass required for such high energies by using the mass-energy equivalence,}
+\begin{gather*}
+	E = \gamma mc^2 \implies m = \frac{E}{\gamma c^2} 
+\end{gather*}
+
+\begin{center}
+	$\boxed{
+	m = \frac{E}{\gamma c^2} =\frac{5.00\times10^{46}J}{\left(\frac{25\sqrt{14}}{84}\right) (3\times10^8ms^{-1})^2} = 5.00\times10^{29}kg}$
+
+\end{center}
+
+\textit{Next, let us compute the delta between the two masses.}
+\begin{gather*}
+	\Delta M = \frac{M_sun}{M_\gamma} = \frac{2.00\times10^{30}kg}{5.00\times10^{29}kg} = 4
+\end{gather*}
+
+We computed these values to suppose what is arising in this cosmological event. Let us assume that the mass we calculated was mostly energy and have it be angular momentum. Continue if time allows....
+\subsection{A solar constant from a gamma ray burst}
+
+We derived the inverse square law from Maxwell's field equations in assignment two. With the derivation, we deduced that the irradiance of a point source is:  $ I_p = \frac{P}{4\pi d^2}$ , where $d$ is the distance away from the source. However, since irradiance is power divided by area, one would conclude that we cannot apply this model to the light emitted from gamma-ray bursts since they are highly concentrated light beam. Therefore, let us explore a means of measuring the distance to the emission of such a violent event. To find the solar constant from a gamma-ray burst, we need to approximate the average power output of the event. We know from the readings that the gamma-ray burst lasted 120 seconds. The S.I. unit for power is energy divided by time. Thus the power average power of the gamma-ray burst was,
+\begin{gather*}
+P = [E][T]^{-1} = [5.00\times10^{46}J][120s]^{-1} = 4.17\times10^{44} j\cdot s \iff 4.17\times10^{44} W
+\end{gather*}
+
+Now that we have computed the average power, we shall use our derivation to show that modelling the gamma-ray burst as a point source is imprecise. Then compare that to another approach for a concentrated light beam.
+
+\begin{gather*}
+I_p = \frac{P}{4\pi d^2} \implies d = \sqrt{\frac{P}{I_p(4\pi)}} = \sqrt{\frac{4.17\times10^{44}W}{(1300\frac{W}{m^2})(4\pi)}} = 1.69\times10^4 ly
+\end{gather*}
+
+This result is far too close, considering that gamma-ray bursts release highly concentrated energy beams. Furthermore, if the gamma-ray burst was to go off at such a distance, it is conceivable that our atmosphere would be in disarray. Therefore let us take a different approach. Let the gamma-ray burst have a cross-section akin to a cylinder, simply a circle.  
+
+\begin{center}
+	%\tdplotsetmaincoords{60}{120}
+	\begin{tikzpicture}
+		
+
+
+		\begin{scope}[shift={(8.,0)}]
+			
+			\coordinate (O) at (0,0,0);
+			\coordinate (A) at (2,0,0);
+			\coordinate (B) at (0,2,0);
+			\coordinate (C) at (0,0,2);
+			
 	
-	
-	
-	
+			
+			\node[cylinder, draw, shape aspect=.5,  
+			cylinder uses custom fill, cylinder end fill=blue!50, 
+			minimum height=1cm,
+			cylinder body fill=blue!25, opacity=0.5, 
+			scale=3]{};
+			
+			
+		\end{scope}
+		
+		
+	\end{tikzpicture}
+\end{center}	
+
+Let the area of this circle be,
+\begin{center}  $A = \pi r^2 $ \textit{where r is the circle's radius.}
+\end{center}
+Modelling the jet of a gamma-ray burst simply as the area of the circle remains problematic. Since the radius of the cross-section would not imply the distance travelled by the light beam. Therefore we must add an extra variable that relates the distance travelled by the beam to its radius. Let us consider a simplified model of a gamma-ray burst:
+
+\begin{center}
+\begin{tikzpicture}
+
+
+
+
+	\draw (0,0) -- (0.1,1);
+	\draw (0,0) -- (-0.1,1);
+	\draw (0,0) -- (-0.1,-1);
+	\draw (0,0) -- (0.1,-1);
+	\shade[ball color = black!40, opacity = 0.9] (0,0) circle (0.1cm);
+	\draw (0,0) circle (0.1cm);
+\end{tikzpicture}
+\end{center}
+
+Here we have an entity with two jets along its rotation axis. With this, we can model the spread of this beam with simple trigonometry. Consider one of the two jets, and model it as a triangle. With the triangle, we can divide it into two right-hand triangles. With this, we can relate the distance travelled to the gamma-ray burst's opening angle $\theta$.
+\begin{center}
+\begin{tikzpicture}
+	\draw(0,0) -- (5,2);
+	\draw(0,0) -- node[below]{$d$}(5,0);
+	\draw(5,2) -- node[right]{$r$}(5,0);
+	\draw(1,0.2) node{$\theta$};
+\end{tikzpicture}
+\end{center}
+\textit{With this, we may write the relation of radius and distance as,}
+\begin{gather*}
+	r = d\tan[](\theta)
+\end{gather*}
+
+ Now that we understand the area of the light beam as a relation of distance let us rearrange and find the average length of the gamma rays that must be emitted to achieve the solar constant.
+
+\begin{gather*}
+	I_\gamma = \frac{P}{A} =\frac{P}{\pi r^2} = \frac{P}{\pi \left(d\tan\theta\right)^2} = \frac{P}{\pi d^2\tan[2](\theta)} 
+\end{gather*}
+\begin{gather*}
+	I_\gamma = \frac{P}{\pi d^2\tan[2](\theta)} \implies d^2 = \frac{P}{I_\gamma\pi\tan[2](\theta)} \implies  d = \sqrt{\frac{P}{I_\gamma\pi\tan[2](\theta)}}
+\end{gather*}
+Let us assume the angle $\theta$ is approximately $0.05$ radians,
+\begin{center}
+	$\boxed{d = \sqrt{\frac{P}{I_\gamma\pi\tan[2](\theta)}} = \sqrt{\frac{(4.167\times10^{44}W)}{(1300 \frac{W}{m^2})\pi\tan[2](0.05)}} = 6.383\times10^{21}m}
+	$
+\end{center}
+Converting this distance to light years,
+
+\begin{center}
+ $\boxed{d = \frac{6.383\times10^{21}m}{(3\times10^5ms^{-1})(5^5\times4^4\times3^3\times2^2\times1^1)(365)}=6.751\times10^5ly}
+ $	
+\end{center}
+Assuming that the gamma-ray burst had an initial opening angle of 0.05 radians. For the earth to receive a comparable amount of energy to our sun, the gamma-ray burst must occur approximately $6.75\times10^{5}$ light-years away and be pointed directly toward us. However, since we do not know the precise opening angle of the beam, the location in which the gamma-ray burst ought to lie is variable. Let us illustrate this in a graph which compares the opening angle to the distance the gamma-ray burst must lie. 
+\begin{center}
+	\includegraphics[width=0.5\linewidth]{"../../../../Radians as a function of distance"}
+\end{center}
+Though it is an approximation, however, by observing this graph, we may assume that it is necessary for the gamma-ray burst to be no more than $1.00\times10^7$ light years away to ensure that it does not exceed the power output of our host star.
+
+
+\section{Quanta, and the structure of the universe} 
+
+\section{The lifetime of our sun}
+
+The potential energy U of an object due to its own gravity is of order:
+𝑈  ∼ 𝐺𝑀2 𝑟
+where M is the body's mass and r is its radius. There is a factor in this equation that depends on the density distribution within the object (e.g. 0.6 for a uniform sphere) - but for rough calculations we can ignore that.
+
+(a) Using the preceding approximation, calculate the potential energy stored in the self -gravity of the sun, assuming a solar radius of 6.96 x 108 m and solar mass of 2 x 1030 kg. (3 points)
+
+Using dimensional analysis we can approximate the quantity of the gravitational potential energy.
+
+\begin{gather*}
+U \approx \frac{GM^2}{r} \approx \frac{(6.67\times10^{-11})(2.00\times10^{30}kg)}{6.96\times10^8m} \approx 3.83\times10^{41}J
+\end{gather*}
+
+(b) Calculate the total power radiated by the sun assuming the temperature of the stellar photosphere is a 6000 K blackbody. (3 points)
+
+
+\begin{gather*}
+	L = 4\pi r^2 \sigma T^4
+\end{gather*}
+\begin{center}
+$\boxed{L = 4\pi(6.96\times10^8m)^2(5.6\times10^{-8}J)(6000K)^4 = 4.42\times10^{26}W}
+$
+\end{center}
+
+Estimate the lifetime of the sun if its energy source was purely locked-up gravitational energy. (2 points)
+
+\begin{gather*}
+	T = \frac{E_T}{L}
+\end{gather*}
+\begin{center}
+$\boxed{T = \frac{E_T}{L} = \frac{3.83\times10^{41}J}{4.42\times10^{26}W}=8.67\times10^{14}s}
+$
+\end{center}
+
+
+
+
+
 	
 \end{document}
